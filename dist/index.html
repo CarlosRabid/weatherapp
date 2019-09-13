@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- <link rel="stylesheet" href="/css/all.css">
     <link href='fonts/fonts.css' rel='stylesheet'> -->
 
@@ -19,7 +21,7 @@
 
     <script id="container" type="text/x-handlebars-template">
         {{#each data}}
-        <div><img class="thumb" src="{{conditionPic}}"><li>{{name}} {{temperature}} {{condition}} {{updatedAt}}</li></div>
+        <div><img class="thumb" src="{{conditionPic}}"><li><i class="fa fa-plus-circle addSave"></i><span id="name">{{name}}</span>> {{temperature}} {{condition}} {{updatedAt}}<i class="fa fa-minus-circle deleteDB"></i></li></div>
         {{/each}}
     </script>
 

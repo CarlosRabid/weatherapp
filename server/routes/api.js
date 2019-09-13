@@ -16,7 +16,7 @@ router.get('/city/:cityName', function (req, res) {
         // let result = processed.results
         ncity = new City({
             name: cit.location.name,  //location.name
-            updatedAt: moment().format('YYYY MM DD'),                        // 
+            updatedAt: moment().format('ll'),                        // 
             temperature: cit.current.temperature,
             condition: cit.current.weather_descriptions[0],
             conditionPic: cit.current.weather_icons[0]
@@ -26,6 +26,7 @@ router.get('/city/:cityName', function (req, res) {
         // });
         // console.log(ncity)
     })
+    console.log(ncity)
     res.send(ncity)
     // res.send(ncity)
 })
@@ -51,8 +52,9 @@ router.post('/city', function (req, res) {
 
 router.delete('/city/:cityName', function (req, res) {
     let cityname = req.params.cityName
+    console.log(cityname)
     City.findOne({ name: cityname }, function (err, reply) {
-        console.log(err)
+        console.log(reply)
         reply.remove()
         City.find({}, function (err, response) {
             res.send(response)
