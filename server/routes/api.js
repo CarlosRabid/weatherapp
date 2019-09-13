@@ -26,7 +26,7 @@ router.get('/city/:cityName', function (req, res) {
         // });
         // console.log(ncity)
     })
-    console.log(ncity)
+
     res.send(ncity)
     // res.send(ncity)
 })
@@ -52,9 +52,9 @@ router.post('/city', function (req, res) {
 
 router.delete('/city/:cityName', function (req, res) {
     let cityname = req.params.cityName
-    console.log(cityname)
+
     City.findOne({ name: cityname }, function (err, reply) {
-        console.log(reply)
+
         reply.remove()
         City.find({}, function (err, response) {
             res.send(response)

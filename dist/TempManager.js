@@ -40,7 +40,7 @@ class TempManager {
 
 
     removeCity(cityName) {
-        debugger
+
 
         let cityObj = this.cityData.filter(c => c.name == cityName)
         $.ajax({

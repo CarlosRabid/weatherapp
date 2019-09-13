@@ -8,7 +8,6 @@ manager.getDataFromDB().then((data) => {
 
 
 let handleSearch = async function () {
-    debugger
     let cityName = $("#inputText").val()
 
     let ncity = await manager.getCityData(cityName)// $.get(`/city/${cityName}`) // handleSearch
@@ -16,8 +15,7 @@ let handleSearch = async function () {
     render.render('#container', '.container', ncity)
 }
 
-$(".container").on("click", ".addSave", function () {   // deleteDB
-    debugger
+$(".container").on("click", ".addSave", function () {   // addDB
     let citiName = $(this).closest("div").find("span").text()
     manager.saveCity(citiName)
     return manager.getDataFromDB().then((data) => {
@@ -27,7 +25,6 @@ $(".container").on("click", ".addSave", function () {   // deleteDB
 )
 
 $(".container").on("click", ".deleteDB", function () {   // deleteDB
-    debugger
     let citiName = $(this).closest("div").find("span").text()
     manager.removeCity(citiName)
     return manager.getDataFromDB().then((data) => {
