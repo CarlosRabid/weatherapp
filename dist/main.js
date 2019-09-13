@@ -25,7 +25,6 @@ $(".container").on("click", ".addSave", function () {   // addDB
 )
 
 $(".container").on("click", ".deleteDB", function () {   // deleteDB
-    debugger
     let citiName = $(this).closest(".relleno").find("span").text()
     manager.removeCity(citiName)
     return manager.getDataFromDB().then((data) => {
