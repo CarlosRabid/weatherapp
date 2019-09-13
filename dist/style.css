@@ -1,0 +1,45 @@
+body{
+    background-color: lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+}
+
+input{
+    margin-left: 18vmax;
+
+
+
+}
+
+.boton{
+    margin-right: 20vmax;
+
+
+    
+}
+
+.container {
+    display: grid;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color:darkolivegreen;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 4fr;
+    grid-gap: 5vh;
+}
+
+img{
+    align-self: center;
+    height: 5vh;
+    width: 5vw;
+}
+
+li{
+    align-content: center;
+    align-self: center;
+
+    align-items: center;
+}

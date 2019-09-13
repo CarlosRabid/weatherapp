@@ -10,9 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajax": "0.0.4",
     "body-parser": "^1.17.0",
     "express": "^4.15.0",
-    "mongoose": "^4.8.5",
+    "get-google-fonts": "^1.2.0",
+    "handlebars": "^4.2.0",
+    "jquery": "^3.4.1",
+    "mongoose": "^4.13.19",
     "request": "^2.80.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2"
   }
 }
