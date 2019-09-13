@@ -16,7 +16,7 @@ let handleSearch = async function () {
 }
 
 $(".container").on("click", ".addSave", function () {   // addDB
-    let citiName = $(this).closest("div").find("span").text()
+    let citiName = $(this).closest("li").find("span").text()
     manager.saveCity(citiName)
     return manager.getDataFromDB().then((data) => {
         render.render('#container', '.container', data)
@@ -25,7 +25,8 @@ $(".container").on("click", ".addSave", function () {   // addDB
 )
 
 $(".container").on("click", ".deleteDB", function () {   // deleteDB
-    let citiName = $(this).closest("div").find("span").text()
+    debugger
+    let citiName = $(this).closest(".relleno").find("span").text()
     manager.removeCity(citiName)
     return manager.getDataFromDB().then((data) => {
         render.render('#container', '.container', data)

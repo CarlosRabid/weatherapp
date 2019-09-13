@@ -17,11 +17,19 @@
 <body>
     <input type="text" id="inputText" placeholder="Enter City">
     <button class="boton" onclick="handleSearch()">Find City!</button>
-    <div class="container" ></div>
+    <div class="container"></div>
 
     <script id="container" type="text/x-handlebars-template">
         {{#each data}}
-        <div><img class="thumb" src="{{conditionPic}}"><li><i class="fa fa-plus-circle addSave"></i><span id="name">{{name}}</span>> {{temperature}} {{condition}} {{updatedAt}}<i class="fa fa-minus-circle deleteDB"></i></li></div>
+        <div class="relleno">
+            <img class="thumb" src="{{conditionPic}}">
+            <li><div><i class="fa fa-plus-circle addSave"></i>
+            </div>><span id="name">{{name}}</span>> 
+            {{temperature}} <br> 
+            {{condition}} <br>
+            {{updatedAt}}</li>
+            <div><i class="fa fa-minus-circle deleteDB"></i></div>>
+        </div>
         {{/each}}
     </script>
 
